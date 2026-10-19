@@ -48,6 +48,7 @@ fn run_loop<W: Write>(stdout: &mut W) -> io::Result<()> {
 
         let (term_width, term_height) = terminal::size()?;
         if term_width == 0 || term_height < 2 {
+            std::thread::sleep(Duration::from_millis(33));
             continue;
         }
 

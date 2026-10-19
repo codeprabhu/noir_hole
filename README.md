@@ -18,7 +18,7 @@
 
 ## Requirements
 
-- Rust stable with Cargo
+- Rust 1.85+ with Cargo (the minimum stable release for edition 2024)
 - A terminal supporting ANSI truecolor and Unicode block characters
 - A terminal size of at least a few rows and columns
 

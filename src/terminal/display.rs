@@ -36,7 +36,12 @@ pub fn draw<W: Write>(
     status: &str,
 ) -> io::Result<()> {
     let (term_width, term_height) = terminal::size()?;
-    let rows = term_height.saturating_sub(1) as usize;
+    let rendered_rows = if width == 0 {
+        0
+    } else {
+        pixels.len() / width / 2
+    };
+    let rows = (term_height.saturating_sub(1) as usize).min(rendered_rows);
     let draw_width = (width / 2).min(term_width as usize);
 
     for row in 0..rows {
