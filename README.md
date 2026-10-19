@@ -71,4 +71,5 @@ The lensing model is an efficient visual approximation of curved null-ray paths 
 
 ## License
 
-No license has been selected yet. Add one before distributing the project publicly.
+Noir Hole is licensed under the MIT License. See [LICENSE](LICENSE) for the
+full license text.
